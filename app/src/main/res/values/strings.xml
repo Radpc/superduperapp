@@ -4,4 +4,6 @@
     <string name="HintSenha">Senha</string>
     <string name="ButtonLogin">Login</string>
     <string name="HintButtonLogin">LOGIN</string>
+    <string name="buttonRegister">REGISTER</string>
+    <string name="accessLogo">Logo</string>
 </resources>
