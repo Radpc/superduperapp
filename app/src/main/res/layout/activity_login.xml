@@ -1,20 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/darkGreen"
     tools:context=".Login">
 
     <EditText
-        android:layout_width="wrap_content"
+        android:id="@+id/editTextUser"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
         android:autofillHints=""
         android:hint="@string/HintUsuario"
         android:inputType="text"
-        android:singleLine="false"
+        android:selectAllOnFocus="false"
         tools:layout_editor_absoluteX="69dp"
         tools:layout_editor_absoluteY="135dp"
         tools:targetApi="o" />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="229dp"
+        android:autofillHints=""
+        android:hint="@string/HintSenha"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="false"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="135dp"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="150dp"
+
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="161dp"
+        android:background="@drawable/button_fallout"
+        android:text="@string/HintButtonLogin"
+        android:textColor="#00FF27" />
+
+</RelativeLayout>

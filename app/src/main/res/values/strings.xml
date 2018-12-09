@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Super Duper App</string>
     <string name="HintUsuario">Usuario</string>
+    <string name="HintSenha">Senha</string>
+    <string name="ButtonLogin">Login</string>
+    <string name="HintButtonLogin">LOGIN</string>
 </resources>
