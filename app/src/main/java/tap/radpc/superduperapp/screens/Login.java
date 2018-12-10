@@ -1,12 +1,14 @@
-package tap.radpc.superduperapp;
+package tap.radpc.superduperapp.screens;
 
 import android.arch.persistence.room.Room;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import tap.radpc.superduperapp.R;
 import tap.radpc.superduperapp.database.AppDatabase;
 import tap.radpc.superduperapp.database.daos.UsuarioDAO;
 import tap.radpc.superduperapp.database.entities.Usuario;
@@ -40,20 +42,23 @@ public class Login extends AppCompatActivity {
         //Init of the DatabaseChecker
         final UsuarioDAO usuarioCheck = database.getUsuarioDAO();
 
-
+        //[ACTION] - BUTTON LOGIN
         buttonLogin.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick(View v){
-                        i++;
-                        Usuario user = new Usuario("Matheus"+i,"321",true);
-                        usuarioCheck.insert(user);
-                        String aux = usuarioCheck.getUsuario("Matheus"+i).getUsuario();
-                        textViewTeste.setText(aux);
-
+                        //TODO create a LOGIN onClick
                     }
                 }
         );
 
+        //[ACTION] - BUTTON REGISTER
+        buttonRegister.setOnClickListener(
+                new Button.OnClickListener(){
+                    public void onClick(View v){
+                        startActivity(new Intent(getApplicationContext(),Register.class));
+                    }
+                }
+        );
 
     }
 }

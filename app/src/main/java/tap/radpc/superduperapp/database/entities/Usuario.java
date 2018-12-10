@@ -11,12 +11,10 @@ public class Usuario {
     private int id = 0;
     private String usuario;
     private String senha;
-    private boolean admin;
 
-    public Usuario(String usuario, String senha, boolean admin) {
+    public Usuario(String usuario, String senha) {
         this.usuario = usuario;
         this.senha = senha;
-        this.admin = admin;
     }
 
     @NonNull
@@ -45,11 +43,4 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public boolean isAdmin() {
-        return admin;
-    }
-
-    public void setAdmin(boolean admin) {
-        this.admin = admin;
-    }
 }
