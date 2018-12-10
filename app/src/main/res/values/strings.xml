@@ -6,4 +6,8 @@
     <string name="HintButtonLogin">LOGIN</string>
     <string name="buttonRegister">REGISTER</string>
     <string name="accessLogo">Logo</string>
+    <string name="registerTitle">REGISTER</string>
+    <string name="registerUser">User</string>
+    <string name="registerButton">REGISTER</string>
+    <string name="registerPassword">Password</string>
 </resources>

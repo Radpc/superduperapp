@@ -15,9 +15,11 @@ public class Login extends AppCompatActivity {
 
     //Init of references:
     Button buttonLogin;
+    Button buttonRegister;
     TextView textViewTeste;
     int i = 0;
 
+    //Init of Database
     AppDatabase database = Room.databaseBuilder(this, AppDatabase.class, "db-fallout")
             .allowMainThreadQueries()   //Allows room to do operation on main thread
             .build();
@@ -26,12 +28,14 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        
+
 
 
 //      Referencing of references:
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
         textViewTeste = (TextView) findViewById(R.id.textViewTeste);
+        buttonRegister = (Button) findViewById(R.id.buttonRegister);
+
 
         //Init of the DatabaseChecker
         final UsuarioDAO usuarioCheck = database.getUsuarioDAO();
