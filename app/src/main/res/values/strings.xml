@@ -10,4 +10,9 @@
     <string name="registerUser">User</string>
     <string name="registerButton">REGISTER</string>
     <string name="registerPassword">Password</string>
+    <string name="usuarios">USUARIOS</string>
+    <string name="produtos">PRODUTOS</string>
+    <string name="relatorio">RELATORIO</string>
+    <string name="venda">VENDA</string>
+    <string name="menu">MENU</string>
 </resources>

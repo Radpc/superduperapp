@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import tap.radpc.superduperapp.R;
 import tap.radpc.superduperapp.database.AppDatabase;
@@ -19,7 +21,8 @@ public class Login extends AppCompatActivity {
     Button buttonLogin;
     Button buttonRegister;
     TextView textViewTeste;
-    int i = 0;
+    EditText editTextUser;
+    EditText editTextPassword;
 
     //Init of Database
     AppDatabase database = Room.databaseBuilder(this, AppDatabase.class, "db-fallout")
@@ -37,6 +40,8 @@ public class Login extends AppCompatActivity {
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
         textViewTeste = (TextView) findViewById(R.id.textViewTeste);
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
+        editTextUser = (EditText) findViewById(R.id.editTextUser);
+        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
 
 
         //Init of the DatabaseChecker
@@ -46,7 +51,28 @@ public class Login extends AppCompatActivity {
         buttonLogin.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick(View v){
-                        //TODO create a LOGIN onClick
+                        Usuario user = usuarioCheck.getUsuario(editTextUser.getText().toString());
+                        if(user != null){
+                            if(user.getSenha().equals(editTextPassword.getText().toString())){
+                                entrarTela(user);
+                            }else{
+                                Toast.makeText(getApplicationContext(), "Ora, sua senha não era outra..?", Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(getApplicationContext(), "[" + user.getSenha() + "]" + " diferente da colocada " + "[" + editTextPassword.getText().toString() + "]", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Não me lembro de nenhum " + editTextUser.getText().toString() + " passando por aqui..", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                    }
+                }
+        );
+
+        buttonLogin.setOnLongClickListener(
+                new Button.OnLongClickListener(){
+                    public boolean onLongClick(View v){
+                        Toast.makeText(getApplicationContext(), "LONG CLICK", Toast.LENGTH_SHORT).show();
+                        return true;
                     }
                 }
         );
@@ -61,4 +87,10 @@ public class Login extends AppCompatActivity {
         );
 
     }
+
+
+    private void entrarTela(Usuario user){
+        startActivity(new Intent(getApplicationContext(),mainMenu.class));
+    }
+
 }

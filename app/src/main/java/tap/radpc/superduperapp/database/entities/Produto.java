@@ -11,7 +11,7 @@ public class Produto {
     @NonNull
     private int serial;
     private String nome;
-    private int descricao;
+    private String descricao;
     private int preco;
     private int precoComprado;
     private int estoque;
@@ -35,11 +35,11 @@ public class Produto {
         this.nome = nome;
     }
 
-    public int getDescricao() {
+    public String getDescricao() {
         return descricao;
     }
 
-    public void setDescricao(int descricao) {
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
@@ -83,8 +83,7 @@ public class Produto {
         this.categoria = categoria;
     }
 
-    public Produto(@NonNull int serial, String nome, int descricao, int preco, int precoComprado, int estoque, String medida, String categoria) {
-
+    public Produto(@NonNull int serial, String nome, String descricao, int preco, int precoComprado, int estoque, String medida, String categoria) {
         this.serial = serial;
         this.nome = nome;
         this.descricao = descricao;

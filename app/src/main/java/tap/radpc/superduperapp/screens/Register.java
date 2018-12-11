@@ -59,13 +59,13 @@ public class Register extends AppCompatActivity {
                             return;
                         }
 
-                        if(usuarioCheck.getUsuario(rUser).size() != 0){
+                        if(usuarioCheck.getUsuario(rUser) != null){
                             Toast.makeText(getApplicationContext(), "Parece que já existe um sobrevivente com esse nome...", Toast.LENGTH_SHORT).show();
                             return;
                         }
                         Usuario user = new Usuario(rUser,rPassword);
                         usuarioCheck.insert(user);
-                        startActivity(new Intent(getApplicationContext(),Login.class));
+                        finish();
                     }
                 }
         );

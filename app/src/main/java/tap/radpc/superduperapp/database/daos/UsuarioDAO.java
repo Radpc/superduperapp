@@ -25,5 +25,5 @@ public interface UsuarioDAO {
     List<Usuario> getUsuarios();
 
     @Query("Select * FROM usuario WHERE usuario = :user")
-    List<Usuario> getUsuario(String user);
+    Usuario getUsuario(String user);
 }

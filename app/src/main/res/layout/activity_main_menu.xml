@@ -1,9 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screens.mainMenu">
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/buttonUsuarios"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="220dp"
+        android:background="@drawable/button_fallout"
+        android:text="@string/usuarios"
+        android:textColor="#00FF27" />
+
+    <Button
+        android:id="@+id/buttonProdutos"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="371dp"
+        android:background="@drawable/button_fallout"
+        android:text="@string/produtos"
+
+        android:textColor="#00FF27" />
+
+    <Button
+        android:id="@+id/buttonVenda"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/button_fallout"
+        android:text="@string/venda"
+        android:textColor="#00FF27" />
+
+    <Button
+        android:id="@+id/buttonRelatorio"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="296dp"
+        android:background="@drawable/button_fallout"
+        android:text="@string/relatorio"
+        android:textColor="#00FF27" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="@string/menu"
+        android:textColor="@color/green"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+</RelativeLayout>

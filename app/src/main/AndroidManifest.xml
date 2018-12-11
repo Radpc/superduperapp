@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".screens.Register" />
-        <activity android:name=".screens.mainMenu"></activity>
+        <activity android:name=".screens.mainMenu" />
+        <activity android:name=".screens.Produtos" />
+        <activity android:name=".screens.AddProduct"></activity>
     </application>
 
 </manifest>
